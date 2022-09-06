@@ -12,12 +12,12 @@ app.get('/', function(req, res) {
         if (isNaN(numVisitsToDisplay)) {
             numVisitsToDisplay = 1;
         }
-        res.send('Number of visits is: ' + numVisitsToDisplay);
+        res.send('web 2: Number of visits is: ' + numVisitsToDisplay);
         numVisits++;
         redisClient.set('numVisits', numVisits);
     });
 });
 
 app.listen(5000, function() {
-    console.log('Web application is listening on port 5000');
+    console.log('Web application is listening on port 5000!');
 });
